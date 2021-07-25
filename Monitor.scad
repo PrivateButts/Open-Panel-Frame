@@ -38,7 +38,6 @@ cb_hole_spacing_x = 76;
 cb_hole_spacing_y = 54;
 cb_hole_radius = 2;
 cb_thickness = 3;
-cb_angle = acos((monitor_size^2 + monitor_width^2 - monitor_height^2) / (2 * monitor_size * monitor_width));
 
 clip_count = 8;
 
@@ -117,13 +116,12 @@ translate([0, -40, 0]) {
 
 
 // Control Board Backing
-translate([-145, 10, -90])
+translate([-145, 15, -90])
 Board(
     cb_width,
     cb_height,
     cb_hole_spacing_x,
     cb_hole_spacing_y,
     cb_hole_radius,
-    cb_thickness,
-    cb_angle
+    cb_thickness
 );
